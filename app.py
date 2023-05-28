@@ -14,9 +14,9 @@ create_vectorstore_agent,
     VectorStoreInfo
 )
 
-from config import OPENAI_API_KEY
+# from config import OPENAI_API_KEY
 
-os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 llm = OpenAI(temperature=0.1, verbose=True)
 
